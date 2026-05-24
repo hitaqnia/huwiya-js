@@ -1,0 +1,12 @@
+src
+tests
+tsconfig.json
+tsup.config.ts
+build.config.ts
+vitest.config.ts
+.gitignore
+.github
+coverage
+*.tsbuildinfo
+*.bundled_*.mjs
+*.timestamp-*.mjs

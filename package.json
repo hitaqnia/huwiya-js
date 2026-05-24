@@ -1,0 +1,67 @@
+{
+  "name": "@hitaqnia/core",
+  "version": "0.1.0",
+  "description": "Framework-agnostic OAuth2 PKCE client for the Huwiya Identity Provider",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --no-splitting --sourcemap",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --no-splitting --sourcemap --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiTaqnia/huwiya-react.git",
+    "directory": "packages/huwiya-js"
+  },
+  "bugs": {
+    "url": "https://github.com/HiTaqnia/huwiya-react/issues"
+  },
+  "homepage": "https://github.com/HiTaqnia/huwiya-react#readme",
+  "author": "HiTaqnia",
+  "license": "MIT",
+  "keywords": [
+    "huwiya",
+    "idp",
+    "identity-provider",
+    "oauth2",
+    "pkce",
+    "authentication",
+    "auth",
+    "sso",
+    "jwt"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
