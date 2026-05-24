@@ -41,13 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HiTaqnia/huwiya-react.git",
-    "directory": "packages/huwiya-js"
+    "url": "git+https://github.com/hitaqnia/huwiya-js.git"
   },
   "bugs": {
-    "url": "https://github.com/HiTaqnia/huwiya-react/issues"
+    "url": "https://github.com/hitaqnia/huwiya-js/issues"
   },
-  "homepage": "https://github.com/HiTaqnia/huwiya-react#readme",
+  "homepage": "https://github.com/hitaqnia/huwiya-js#readme",
   "author": "HiTaqnia",
   "license": "MIT",
   "keywords": [

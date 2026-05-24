@@ -1,6 +1,6 @@
 # @hitaqnia/core
 
-Framework-agnostic OAuth2 Authorization Code Grant + PKCE client for the [Huwiya Identity Provider](https://github.com/HiTaqnia/huwiya-backend). Use directly from non-React code (Vue, Svelte, vanilla JS, Node tools, etc.) or together with [`@hitaqnia/react`](../huwiya-react), which builds React bindings on top of this package.
+Framework-agnostic OAuth2 Authorization Code Grant + PKCE client for the [Huwiya Identity Provider](https://github.com/hitaqnia/huwiya-backend). Use directly from non-React code (Vue, Svelte, vanilla JS, Node tools, etc.) or together with [`@hitaqnia/react`](https://github.com/hitaqnia/huwiya-react), which builds React bindings on top of this package.
 
 ## Installation
 
