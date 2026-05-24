@@ -5,7 +5,7 @@ import type { HuwiyaConfig, StoredTokens, TokenResponse } from "./types";
 /**
  * Framework-agnostic OAuth2 Authorization Code Grant + PKCE client for the
  * Huwiya Identity Provider. Use this directly from non-React code (Vue,
- * Svelte, vanilla JS, Node tools, etc.) or via the `@hitaqnia/react` provider.
+ * Svelte, vanilla JS, Node tools, etc.) or via the `@hitaqnia/huwiya-react` provider.
  */
 export class HuwiyaClient {
   private config: HuwiyaConfig;

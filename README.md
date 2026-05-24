@@ -1,17 +1,17 @@
-# @hitaqnia/core
+# @hitaqnia/huwiya-core
 
-Framework-agnostic OAuth2 Authorization Code Grant + PKCE client for the [Huwiya Identity Provider](https://github.com/hitaqnia/huwiya-backend). Use directly from non-React code (Vue, Svelte, vanilla JS, Node tools, etc.) or together with [`@hitaqnia/react`](https://github.com/hitaqnia/huwiya-react), which builds React bindings on top of this package.
+Framework-agnostic OAuth2 Authorization Code Grant + PKCE client for the [Huwiya Identity Provider](https://github.com/hitaqnia/huwiya-backend). Use directly from non-React code (Vue, Svelte, vanilla JS, Node tools, etc.) or together with [`@hitaqnia/huwiya-react`](https://github.com/hitaqnia/huwiya-react), which builds React bindings on top of this package.
 
 ## Installation
 
 ```bash
-npm install @hitaqnia/core
+npm install @hitaqnia/huwiya-core
 ```
 
 ## Quick Start
 
 ```ts
-import { HuwiyaClient } from "@hitaqnia/core";
+import { HuwiyaClient } from "@hitaqnia/huwiya-core";
 
 const client = new HuwiyaClient({
   clientId: "your-client-id",
@@ -78,7 +78,7 @@ client.logout();
 Cross-strategy storage used by `HuwiyaClient`. The strategy is a module-global, so a single client instance owns the persisted state for the page.
 
 ```ts
-import { TokenStorage } from "@hitaqnia/core";
+import { TokenStorage } from "@hitaqnia/huwiya-core";
 
 TokenStorage.setStrategy("localStorage");
 TokenStorage.getTokens();   // StoredTokens | null
@@ -93,7 +93,7 @@ TokenStorage.setState(s);
 ### JWT helpers
 
 ```ts
-import { decodeJwt, extractUser } from "@hitaqnia/core";
+import { decodeJwt, extractUser } from "@hitaqnia/huwiya-core";
 
 const payload = decodeJwt(token); // JwtPayload | null — payload only, no verification
 const user = extractUser(token);  // HuwiyaUser | null  — { id, phone, name, scopes }
@@ -104,7 +104,7 @@ const user = extractUser(token);  // HuwiyaUser | null  — { id, phone, name, s
 ### PKCE helpers
 
 ```ts
-import { generateCodeVerifier, generateCodeChallenge, generateState } from "@hitaqnia/core";
+import { generateCodeVerifier, generateCodeChallenge, generateState } from "@hitaqnia/huwiya-core";
 
 const verifier  = generateCodeVerifier();           // 64 random bytes → base64url
 const challenge = await generateCodeChallenge(v);   // SHA-256(verifier) → base64url
@@ -123,12 +123,12 @@ import type {
   TokenResponse,
   StorageStrategy,
   JwtPayload,
-} from "@hitaqnia/core";
+} from "@hitaqnia/huwiya-core";
 ```
 
 ## Runtime requirements
 
-`@hitaqnia/core` uses the Web Crypto API (`globalThis.crypto`) and the Fetch API. These are available in all modern browsers, Node 18+, Deno, Bun, and Workers runtimes.
+`@hitaqnia/huwiya-core` uses the Web Crypto API (`globalThis.crypto`) and the Fetch API. These are available in all modern browsers, Node 18+, Deno, Bun, and Workers runtimes.
 
 The storage helpers assume `sessionStorage` / `localStorage` are available — i.e. they run in a browser-like environment. For non-browser usage you can call `HuwiyaClient` directly without touching storage.
 

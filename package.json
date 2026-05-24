@@ -1,5 +1,5 @@
 {
-  "name": "@hitaqnia/core",
+  "name": "@hitaqnia/huwiya-core",
   "version": "0.1.0",
   "description": "Framework-agnostic OAuth2 PKCE client for the Huwiya Identity Provider",
   "type": "module",

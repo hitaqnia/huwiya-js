@@ -1,8 +1,8 @@
 /**
- * @hitaqnia/core — framework-agnostic OAuth2 Authorization Code Grant + PKCE
+ * @hitaqnia/huwiya-core — framework-agnostic OAuth2 Authorization Code Grant + PKCE
  * client for the Huwiya Identity Provider.
  *
- * Use directly from non-React code, or together with `@hitaqnia/react` which
+ * Use directly from non-React code, or together with `@hitaqnia/huwiya-react` which
  * builds a React provider and hooks on top of this package.
  */
 
